@@ -1,0 +1,160 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", system-ui, sans-serif;
+  background: #f7f4ff;
+  color: #1c1433;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+  background: linear-gradient(135deg, #7f5af0, #5ce1e6);
+  color: white;
+}
+
+.hero button {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 999px;
+  background: white;
+  color: #5b3cc4;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(31, 20, 63, 0.08);
+}
+
+#match-preview {
+  margin-top: 0.75rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #f3f0ff;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 20, 51, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.modal.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  width: min(680px, 100%);
+  background: white;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 24px 48px rgba(31, 20, 63, 0.2);
+  display: grid;
+  gap: 1rem;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon-button {
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-footer {
+  display: grid;
+  gap: 1rem;
+}
+
+.progress {
+  height: 8px;
+  background: #eee9ff;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #7f5af0, #5ce1e6);
+  transition: width 0.2s ease;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.modal-actions button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+  border: none;
+  background: #5b3cc4;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modal-actions button.secondary {
+  background: #ebe6ff;
+  color: #3b2a78;
+}
+
+.question-card {
+  background: #f7f4ff;
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.question-card label {
+  font-weight: 600;
+}
+
+.question-card input,
+.question-card select,
+.question-card textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid #d9d0ff;
+  font-size: 1rem;
+}
+
+.helper-text {
+  font-size: 0.9rem;
+  color: #4c3a74;
+}
